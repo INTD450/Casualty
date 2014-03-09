@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\OnClick\ClickableManager.js">
+    <Files>
+      <File FileName="Assets\Scripts\OnClick\OnClickAction.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\OnClick\LampSwitchClickAction.js" Line="8" Column="24" />
+      <File FileName="Assets\Scripts\OnClick\ShowTextOnClickAction.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\OnClick\ClickableManager.js" Line="39" Column="37" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
