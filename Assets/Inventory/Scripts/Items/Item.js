@@ -17,6 +17,11 @@ static var playersinv : Inventory;
 //Inventory Display
 static var display : InventoryDisplay;
 
+var Player : GameObject ;
+var BackpackFinal : GameObject;
+var pMesh : Mesh;
+var bMesh : Mesh;
+
 private var FPPickUpFound = false;
 
 @script AddComponentMenu ("Inventory/Items/Item")
@@ -26,6 +31,11 @@ function Awake ()
 {
 	playersinv = FindObjectOfType(Inventory); //finding the players inv.
 	display = FindObjectOfType(InventoryDisplay); //finding the players inventory display.
+	Player = GameObject.Find("Player");
+	BackpackFinal = GameObject.Find("BackpackFinal");
+	
+	
+	
 	if (playersinv == null)
 	{
 		canGet = false;
@@ -49,7 +59,16 @@ function Awake ()
 	{
 		FPPickUpFound = true;
 	}
+
+	
 }
+
+
+
+ 
+
+
+
 
 //When you click an item
 function OnMouseDown()

@@ -1,12 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/OnClick/ClickableObject.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HallMate1.js">
     <Files>
-      <File FileName="Assets/Scripts/OnClick/ClickableManager.js" Line="25" Column="1" />
-      <File FileName="Assets/Scripts/screenFader.js" Line="79" Column="36" />
+      <File FileName="Assets/Scripts/HallMate2.js" Line="27" Column="1" />
       <File FileName="Assets/Inventory/Scripts/Items/Item.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/DeathCounter.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/OnClick/ClickableObject.js" Line="29" Column="34" />
+      <File FileName="Assets/Inventory/Scripts/InventoryDisplay.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/OnClick/ShowTextOnClickAction.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Third Person/MoveCharacter.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/screenFader.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Roomdoor.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/HallMate1.js" Line="25" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

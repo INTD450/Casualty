@@ -4,10 +4,10 @@ public var fadeSpeed : float = 190000.5f;            // Speed that the screen fa
 
 
 private var sceneStarting : boolean = true;     // Whether or not the scene is still fading in.
-private var currentScene =0;
+private var currentScene:int;
 
 public var endGame : boolean = false ;         //This will remain false until the player dies
-var deathButton : KeyCode = KeyCode.P; //The button that simulates death.
+var deathButton : KeyCode = KeyCode.P;  //The button that simulates death.
 var deathButton2 : KeyCode = KeyCode.O; //The button that simulates death.
 
 //Death counter script
@@ -19,6 +19,9 @@ static var inventory : InventoryDisplay;
 
 function Awake ()
 {
+	//Check what scene we are current at
+ 	currentScene = Application.loadedLevel;
+
     // Set the texture so that it is the the size of the screen and covers it.
     guiTexture.pixelInset = new Rect(0f, 0f, Screen.width, Screen.height);
     
@@ -54,6 +57,10 @@ function Update ()
 		setEndGame();
 		currentScene=1;
 	}
+}
+
+function setScene(scene: int){
+	currentScene = scene;
 }
 
 function setEndGame(){
@@ -107,7 +114,7 @@ public function EndScene (scene : int)
 }
 
 
-function OnMouseDown () {
+/*function OnMouseDown () {
 //Pick up backpack already
 if (inventory.haveBag==1){
 		currentScene += 1;
@@ -120,4 +127,4 @@ else{
 }
 
 
-}
+}*/
