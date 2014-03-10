@@ -14,6 +14,9 @@ var equippedWeaponVersion : Transform;
 //These will store information about usefull components.
 static var playersinv : Inventory;
 
+//Inventory Display
+static var display : InventoryDisplay;
+
 private var FPPickUpFound = false;
 
 @script AddComponentMenu ("Inventory/Items/Item")
@@ -22,6 +25,7 @@ private var FPPickUpFound = false;
 function Awake ()
 {
 	playersinv = FindObjectOfType(Inventory); //finding the players inv.
+	display = FindObjectOfType(InventoryDisplay); //finding the players inventory display.
 	if (playersinv == null)
 	{
 		canGet = false;
@@ -54,6 +58,13 @@ function OnMouseDown()
 	if (FPPickUpFound == false)
 	{
 		PickUpItem();
+	}
+	
+	//If you pick up the bag
+	if(this.gameObject.name == "BackpackFinal"){
+		display.haveBag = 1;
+		//Destroy it so it doesnt appear in the inventory itself
+		playersinv.RemoveItem(this.transform);
 	}
 }
 
@@ -89,10 +100,15 @@ function PickUpItem ()
 		{
 			playersinv.AddItem(this.transform);
 			MoveMeToThePlayer(playersinv.itemHolderObject);//moves the object, to the player
+
+			
+
 		}
 		else if (playersinv.Contents.length >= playersinv.MaxContent)
 		{
 			Debug.Log("Inventory is full");
+
+    		
 		}
 	}
 }

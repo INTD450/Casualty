@@ -32,6 +32,9 @@ private var associatedInventory : Inventory;
 private var cSheetFound = false;
 private var cSheet : Character;
 
+//You cannot use the inventory system until you equip the bag, then this becomes "1"
+var haveBag = 0;
+
 @script AddComponentMenu ("Inventory/Inventory Display")
 @script RequireComponent(Inventory)
 
@@ -78,7 +81,7 @@ function Update()
 	}
 	
 	//Turn the Inventory on and off and handle audio + pausing the game.
-	if(Input.GetKeyDown(onOffButton))
+	if((haveBag==1) && (Input.GetKeyDown(onOffButton)))
 	{
 		if (displayInventory)
 		{
