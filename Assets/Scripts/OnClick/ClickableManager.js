@@ -9,6 +9,9 @@
  * object.
  */
 
+var hoverTexture:Texture2D;
+var outOfRangeTexture:Texture2D;
+
 private var displayText:String; 
 private var displayTimer:int;
 

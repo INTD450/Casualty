@@ -1,10 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/screenFader.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/OnClick/ClickableObject.js">
     <Files>
-      <File FileName="Assets/Scripts/screenFader.js" Line="108" Column="38" />
-      <File FileName="Assets/Inventory/Scripts/Items/Item.js" Line="27" Column="2" />
+      <File FileName="Assets/Scripts/OnClick/ClickableManager.js" Line="25" Column="1" />
+      <File FileName="Assets/Scripts/screenFader.js" Line="79" Column="36" />
+      <File FileName="Assets/Inventory/Scripts/Items/Item.js" Line="1" Column="1" />
       <File FileName="Assets/Scripts/DeathCounter.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/OnClick/ClickableObject.js" Line="29" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

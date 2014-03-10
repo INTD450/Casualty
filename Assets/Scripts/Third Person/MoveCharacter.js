@@ -22,6 +22,7 @@ private var y = 0.0;
 // Script Variables
 
 private var anim;
+private var runButton = KeyCode.LeftShift;
 
 function Awake(){
 
@@ -30,6 +31,18 @@ function Awake(){
 }
 
 function Update () {
+	// Toggle walking/running with the shift key 
+  
+    
+    if(Input.GetKey("left shift")){
+        isWalking = false; 
+       
+    }
+    else{
+    	isWalking = true;
+    	
+   	}
+
    // Only allow movement and jumps while -----------------  GROUNDED -------------
 
    if(grounded) { 
@@ -77,9 +90,7 @@ function Update () {
         transform.Rotate(0,Input.GetAxis("Horizontal") * rotateSpeed * Time.deltaTime, 0); 
     } 
 
-    // Toggle walking/running with the T key 
-    if(Input.GetKeyDown("t")) 
-        isWalking = !isWalking; 
+    
 
         
 

@@ -1,7 +1,6 @@
 ﻿#pragma strict
 
-var hoverTexture:Texture2D;
-var outOfRangeTexture:Texture2D;
+
 var distance:float = 20;
 
 private var clickingObject:GameObject;
@@ -24,10 +23,10 @@ function Update() {
 		
 		this.withinDistance = distance <= this.distance;
 		
-		if(this.withinDistance)
-			Cursor.SetCursor(hoverTexture, Vector2.zero, CursorMode.Auto);
-		else
-			Cursor.SetCursor(outOfRangeTexture, Vector2.zero, CursorMode.Auto);
+		if(this.withinDistance) {
+			Cursor.SetCursor(clickManager.hoverTexture, Vector2.zero, CursorMode.Auto);
+		} else
+			Cursor.SetCursor(clickManager.outOfRangeTexture, Vector2.zero, CursorMode.Auto);
 	}
 }
 

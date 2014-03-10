@@ -13,6 +13,9 @@ var deathButton2 : KeyCode = KeyCode.O; //The button that simulates death.
 //Death counter script
 static var deathCounter : DeathCounter;
 
+//Inventory Display script
+static var inventory : InventoryDisplay;
+
 
 function Awake ()
 {
@@ -20,6 +23,7 @@ function Awake ()
     guiTexture.pixelInset = new Rect(0f, 0f, Screen.width, Screen.height);
     
     deathCounter = FindObjectOfType(DeathCounter); //finding the death counter script
+    inventory = FindObjectOfType(InventoryDisplay); //finding the inventory display script
 }
 
 
@@ -104,6 +108,16 @@ public function EndScene (scene : int)
 
 
 function OnMouseDown () {
+//Pick up backpack already
+if (inventory.haveBag==1){
 		currentScene += 1;
-		Application.LoadLevel (currentScene);
+		//FadeToBlack();
+		Application.LoadLevel (currentScene);	
+		//StartScene();
+}
+else{
+	Debug.Log("Better pick up bag first");
+}
+
+
 }
