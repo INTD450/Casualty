@@ -4,14 +4,22 @@ public var fadeSpeed : float = 190000.5f;            // Speed that the screen fa
 
 
 private var sceneStarting : boolean = true;     // Whether or not the scene is still fading in.
+private var currentScene =0;
 
 public var endGame : boolean = false ;         //This will remain false until the player dies
 var deathButton : KeyCode = KeyCode.P; //The button that simulates death.
+var deathButton2 : KeyCode = KeyCode.O; //The button that simulates death.
+
+//Death counter script
+static var deathCounter : DeathCounter;
+
 
 function Awake ()
 {
     // Set the texture so that it is the the size of the screen and covers it.
     guiTexture.pixelInset = new Rect(0f, 0f, Screen.width, Screen.height);
+    
+    deathCounter = FindObjectOfType(DeathCounter); //finding the death counter script
 }
 
 
@@ -24,16 +32,23 @@ function Update ()
      }
      if(endGame){
      	//Call the endScene function
-     	EndScene();
+     	EndScene(currentScene);
      }
      
      
-     	//Simulate death
+    //Simulate death for scene 0
 	if(Input.GetKeyDown(deathButton)){
+	//Adding 1 to the death counter
+	deathCounter.Add(1);
 		setEndGame();
-		//var target: screenFader = screen.GetComponent(screenFader);
-		//target.setEndGame();
-		//gameObject.SendMessage("you presssed P", false, SendMessageOptions.DontRequireReceiver);
+		currentScene=0;
+	}
+	//Simulate death for scene 1
+	if(Input.GetKeyDown(deathButton2)){
+		//Adding 1 to the death counter
+		deathCounter.Add(1);
+		setEndGame();
+		currentScene=1;
 	}
 }
 
@@ -73,7 +88,7 @@ function StartScene ()
 }
 
 
-public function EndScene ()
+public function EndScene (scene : int)
 {
     // Make sure the texture is enabled.
     guiTexture.enabled = true;
@@ -84,5 +99,11 @@ public function EndScene ()
     // If the screen is almost black
     if(guiTexture.color.a >= 0.95f)
         //Reload the level.
-        Application.LoadLevel(0);
+        Application.LoadLevel(scene);
+}
+
+
+function OnMouseDown () {
+		currentScene += 1;
+		Application.LoadLevel (currentScene);
 }
