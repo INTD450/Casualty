@@ -55,7 +55,8 @@ function Awake ()
 function OnMouseDown()
 {
 	//If the 'FirstPersonPickUp' script is not attached we want to pick up the item.
-	if (FPPickUpFound == false)
+	//And bag is picked up already (meaning inventory is activated)
+	if ((FPPickUpFound == false) && (display.haveBag==1))
 	{
 		PickUpItem();
 	}
