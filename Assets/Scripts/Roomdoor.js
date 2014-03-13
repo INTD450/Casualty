@@ -12,6 +12,7 @@ static var deathCounter : DeathCounter;
 //Inventory script
 static var display : InventoryDisplay;
 
+
 function Awake ()
 {
 	//Check what scene we are current at
