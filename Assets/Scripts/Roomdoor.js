@@ -12,6 +12,11 @@ static var deathCounter : DeathCounter;
 //Inventory script
 static var display : InventoryDisplay;
 
+//The display text when click on the door
+var displayText:String;
+	
+private var clickingObject:GameObject;
+private var clickManager:ClickableManager;
 
 function Awake ()
 {
@@ -23,6 +28,9 @@ function Awake ()
 	deathCounter = FindObjectOfType(DeathCounter); //finding the death counter script
     screen = FindObjectOfType(screenFader); //finding the screen fader script
     display = FindObjectOfType(InventoryDisplay); //finding the screen fader script
+    
+    clickingObject = GameObject.Find("Player");
+	clickManager = clickingObject.GetComponent(ClickableManager);
 }
 
 
@@ -44,6 +52,7 @@ if(scene == 0){
 	}
 	else{
 		Debug.Log("Hmmm, maybe others on this floor have some supplies. I’ll need my backpack to carry them.");
+		clickManager.ShowDialogBox(displayText);
 	}
 }
 //At scene 1

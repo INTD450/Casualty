@@ -1,11 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/checkDistance.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Inventory/Scripts/Items/Item.js">
     <Files>
-      <File FileName="Assets/Scripts/Roomdoor.js" Line="52" Column="1" />
       <File FileName="Assets/Inventory/Scripts/Items/Item.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/screenFader.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/checkDistance.js" Line="18" Column="20" />
+      <File FileName="Assets/Scripts/screenFader.js" Line="10" Column="1" />
+      <File FileName="Assets/Inventory/Scripts/Inventory.js" Line="3" Column="1" />
+      <File FileName="Assets/Inventory/Scripts/InventoryDisplay.js" Line="52" Column="53" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
