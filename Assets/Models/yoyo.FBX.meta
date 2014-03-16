@@ -1,20 +1,13 @@
 fileFormatVersion: 2
-guid: 8ade20fb9a6607144949bc06a1036c02
+guid: 56787dcbac2ecfe4dbb7b30d5bb8c93b
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: Object001
-    100002: //RootNode
-    100004: yoyo
-    400000: Object001
-    400002: //RootNode
-    400004: yoyo
-    2300000: Object001
-    2300002: yoyo
-    3300000: Object001
-    3300002: yoyo
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: yoyo
-    4300002: Object001
     9500000: //RootNode
   materials:
     importMaterials: 1

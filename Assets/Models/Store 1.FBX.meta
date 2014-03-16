@@ -1,0 +1,144 @@
+fileFormatVersion: 2
+guid: f927d56eb985ef04fbc243cbd716ecb0
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: backdoorexit
+    100002: Counter
+    100004: fridgedoor
+    100006: fridgetop2
+    100008: magazineshelf
+    100010: Particle View 002
+    100012: PopDispenser
+    100014: Store
+    100016: //RootNode
+    100018: StoreCompy
+    100020: StoreCupboard
+    100022: storedoor
+    100024: storedoor2
+    100026: storedoorframe
+    100028: storedoorframe2
+    100030: StoreShelf
+    100032: StoreWindowFrame
+    100034: StoreWindowPane
+    400000: backdoorexit
+    400002: Counter
+    400004: fridgedoor
+    400006: fridgetop2
+    400008: magazineshelf
+    400010: Particle View 002
+    400012: PopDispenser
+    400014: Store
+    400016: //RootNode
+    400018: StoreCompy
+    400020: StoreCupboard
+    400022: storedoor
+    400024: storedoor2
+    400026: storedoorframe
+    400028: storedoorframe2
+    400030: StoreShelf
+    400032: StoreWindowFrame
+    400034: StoreWindowPane
+    2300000: backdoorexit
+    2300002: Counter
+    2300004: fridgedoor
+    2300006: fridgetop2
+    2300008: magazineshelf
+    2300010: PopDispenser
+    2300012: Store
+    2300014: StoreCompy
+    2300016: StoreCupboard
+    2300018: storedoor
+    2300020: storedoor2
+    2300022: storedoorframe
+    2300024: storedoorframe2
+    2300026: StoreShelf
+    2300028: StoreWindowFrame
+    2300030: StoreWindowPane
+    3300000: backdoorexit
+    3300002: Counter
+    3300004: fridgedoor
+    3300006: fridgetop2
+    3300008: magazineshelf
+    3300010: PopDispenser
+    3300012: Store
+    3300014: StoreCompy
+    3300016: StoreCupboard
+    3300018: storedoor
+    3300020: storedoor2
+    3300022: storedoorframe
+    3300024: storedoorframe2
+    3300026: StoreShelf
+    3300028: StoreWindowFrame
+    3300030: StoreWindowPane
+    4300000: Store
+    4300002: Counter
+    4300004: StoreShelf
+    4300006: backdoorexit
+    4300008: magazineshelf
+    4300010: StoreCompy
+    4300012: StoreWindowFrame
+    4300014: storedoorframe2
+    4300016: storedoor2
+    4300018: storedoorframe
+    4300020: storedoor
+    4300022: StoreWindowPane
+    4300024: PopDispenser
+    4300026: fridgedoor
+    4300028: fridgetop2
+    4300030: StoreCupboard
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
