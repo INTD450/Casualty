@@ -1,14 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../INTD 450/Prototype/Assets/Scripts/HospitalDoor.js">
-    <Files>
-      <File FileName="Assets/Scripts/storeCollision.js" Line="17" Column="1" />
-      <File FileName="../../INTD 450/Prototype/Assets/Scripts/sniperCollision.js" Line="31" Column="20" />
-      <File FileName="Assets/Scripts/DeathCounter.js" Line="6" Column="23" />
-      <File FileName="Assets/Scripts/StoreDoor1.js" Line="7" Column="43" />
-      <File FileName="../../INTD 450/Prototype/Assets/Scripts/HospitalDoor.js" Line="28" Column="26" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
