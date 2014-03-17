@@ -3,9 +3,7 @@
 class HallMate2 extends OnClickAction {
 	//Track the number of clicks on this door
 	static var number:int;
-	
-	var displayText:String;
-	
+		
 	private var clickingObject:GameObject;
 	private var clickManager:ClickableManager;
 	

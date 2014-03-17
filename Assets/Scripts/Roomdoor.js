@@ -27,7 +27,7 @@ function Awake ()
     
 	deathCounter = FindObjectOfType(DeathCounter); //finding the death counter script
     screen = FindObjectOfType(screenFader); //finding the screen fader script
-    display = FindObjectOfType(InventoryDisplay); //finding the screen fader script
+    display = FindObjectOfType(InventoryDisplay); //finding the inventory display script
     
     clickingObject = GameObject.Find("Player");
 	clickManager = clickingObject.GetComponent(ClickableManager);
@@ -51,13 +51,12 @@ if(scene == 0){
 		screen.setEndGame();	
 	}
 	else{
-		Debug.Log("Hmmm, maybe others on this floor have some supplies. I’ll need my backpack to carry them.");
 		clickManager.ShowDialogBox(displayText);
 	}
 }
 //At scene 1
 if(scene == 1){
-	display.haveBag = 1;
+	//display.haveBag = 1;
 	//If player tries to go back into room, the player dies, death counter +1, reset to current scene
 	deathCounter.Add(1);
 	screen.setEndGame();

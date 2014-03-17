@@ -64,7 +64,7 @@ function Awake()
 	
 		
 	//If at scene 1, haveBag is automatically set to 1
-	if(Application.loadedLevel==1){
+	if(Application.loadedLevel>=1){
 		haveBag=1;
 	}
 	

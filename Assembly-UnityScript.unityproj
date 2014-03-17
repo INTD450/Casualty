@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\DialogueSystem.js" />
      <Compile Include="Assets\Scripts\HallMate1.js" />
      <Compile Include="Assets\Scripts\HallMate2.js" />
+     <Compile Include="Assets\Scripts\HospitalDoor.js" />
      <Compile Include="Assets\Scripts\OnClick\ClickableManager.js" />
      <Compile Include="Assets\Scripts\OnClick\ClickableObject.js" />
      <Compile Include="Assets\Scripts\OnClick\LampSwitchClickAction.js" />
@@ -73,10 +74,13 @@
      <Compile Include="Assets\Scripts\OnClick\TurnGreenOnClickAction.js" />
      <Compile Include="Assets\Scripts\Roomdoor.js" />
      <Compile Include="Assets\Scripts\SaveLoadSystem.js" />
+     <Compile Include="Assets\Scripts\StoreDoor1.js" />
      <Compile Include="Assets\Scripts\Third Person\Animations.js" />
      <Compile Include="Assets\Scripts\Third Person\MoveCamera.js" />
      <Compile Include="Assets\Scripts\Third Person\MoveCharacter.js" />
      <Compile Include="Assets\Scripts\screenFader.js" />
+     <Compile Include="Assets\Scripts\sniperCollision.js" />
+     <Compile Include="Assets\Scripts\storeCollision.js" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Specular.shader" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Opaque Bump.shader" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Transparent.shader" />
