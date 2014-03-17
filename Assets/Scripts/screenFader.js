@@ -1,6 +1,6 @@
 ﻿#pragma strict
 
-public var fadeSpeed : float = 190000.5f;            // Speed that the screen fades to and from black.
+public var fadeSpeed : float = 0.5f;            // Speed that the screen fades to and from black.
 
 
 private var sceneStarting : boolean = true;     // Whether or not the scene is still fading in.
@@ -95,12 +95,15 @@ function StartScene ()
         
         // The scene is no longer starting.
         sceneStarting = false;
+        Time.timeScale = 1;
     }
 }
 
 
 public function EndScene (scene : int)
 {
+	Time.timeScale = 0.05;
+
     // Make sure the texture is enabled.
     guiTexture.enabled = true;
     
@@ -108,9 +111,10 @@ public function EndScene (scene : int)
     FadeToBlack();
     
     // If the screen is almost black
-    if(guiTexture.color.a >= 0.95f)
+    if(guiTexture.color.a >= 0.95f){
         //Reload the level.
         Application.LoadLevel(scene);
+    }
 }
 
 

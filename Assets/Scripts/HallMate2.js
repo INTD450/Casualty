@@ -1,37 +1,34 @@
 ﻿#pragma strict
 
-
-//Track the number of clicks on this door
-var number:int;
-
-function Awake ()
-{	
-number = 0;
-
-}
-
-
-function Update ()
-{
-
-}
-
-
-
-function OnMouseDown () {
+class HallMate2 extends OnClickAction {
+	//Track the number of clicks on this door
+	static var number:int;
 	
+	var displayText:String;
 	
-	if(number == 0){
-	Debug.Log("Go away! We don’t have anything");
+	private var clickingObject:GameObject;
+	private var clickManager:ClickableManager;
+	
+	function Start() {
+		clickingObject = GameObject.Find("Player");
+		clickManager = clickingObject.GetComponent(ClickableManager);
+		number = 0;
 	}
-	else if(number == 1){
-	Debug.Log("Come on buddy! We've got nothing! We don't have any food.");
+	
+
+	function OnMouseDown () {
+		if(number == 0){
+			clickManager.ShowDialogBox("Go away! We don’t have anything");
+		}
+		else if(number == 1){
+			clickManager.ShowDialogBox("Come on buddy! We've got nothing! We don't have any food.");
+		}
+		else if(number == 2){
+			clickManager.ShowDialogBox("Seriously? You are going to keep on knocking? We. Do. Not. Have. Any. Supplies. Nothing medical. Nothing. Okay!?");
+		}
+		else if(number == 3){
+			clickManager.ShowDialogBox("........");
+		}	
+		number++;
 	}
-	else if(number == 2){
-	Debug.Log("Seriously? You are going to keep on knocking? We. Do. Not. Have. Any. Supplies. Nothing medical. Nothing. Okay!?");
-	}
-	else if(number == 3){
-	Debug.Log("........");
-	}	
-number++;
 }

@@ -78,7 +78,7 @@ function OnMouseDown()
 	if ((FPPickUpFound == false) && (display.haveBag==1))
 	{
 		PickUpItem();
-	}
+	} 
 	
 	//If you pick up the bag
 	if(this.gameObject.name == "BackpackFinal"){
