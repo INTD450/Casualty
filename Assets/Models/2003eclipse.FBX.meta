@@ -15,6 +15,8 @@ ModelImporter:
     3300002: wheels-n-acc
     4300000: 2003eclipse
     4300002: wheels-n-acc
+    6400000: 2003eclipse
+    6400002: wheels-n-acc
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -36,7 +38,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: .00999999978
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

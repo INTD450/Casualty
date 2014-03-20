@@ -14,12 +14,17 @@ ModelImporter:
     2300000: moster
     2300002: tab
     2300004: voltcantexture
+    2300006: //RootNode
     3300000: moster
     3300002: tab
     3300004: voltcantexture
+    3300006: //RootNode
     4300000: moster
     4300002: tab
     4300004: voltcantexture
+    6400000: moster
+    6400002: tab
+    6400004: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -41,7 +46,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: .00999999978
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

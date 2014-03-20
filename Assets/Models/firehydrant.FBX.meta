@@ -30,6 +30,11 @@ ModelImporter:
     4300004: Cylinder003
     4300006: Cylinder004
     4300008: ScrewsOnFireHydrant
+    6400000: Cylinder002
+    6400002: Cylinder003
+    6400004: Cylinder004
+    6400006: FireHydrant
+    6400008: ScrewsOnFireHydrant
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -51,7 +56,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: .00999999978
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

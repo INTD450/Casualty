@@ -6,15 +6,23 @@ ModelImporter:
     100000: //RootNode
     100002: Spring001_MeshPart0
     100004: Spring001_MeshPart1
+    100006: Spring001
     400000: //RootNode
     400002: Spring001_MeshPart0
     400004: Spring001_MeshPart1
+    400006: Spring001
     2300000: Spring001_MeshPart0
     2300002: Spring001_MeshPart1
+    2300004: //RootNode
     3300000: Spring001_MeshPart0
     3300002: Spring001_MeshPart1
+    3300004: //RootNode
     4300000: Spring001_MeshPart0
     4300002: Spring001_MeshPart1
+    4300004: rope
+    6400000: //RootNode
+    6400002: Spring001_MeshPart0
+    6400004: Spring001_MeshPart1
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -36,7 +44,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: .00999999978
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

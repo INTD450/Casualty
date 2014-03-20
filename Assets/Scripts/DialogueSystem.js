@@ -40,6 +40,55 @@ private function RegisterExampleDialogue() {
 	// There are more functions, too. See below.
 }
 
+// Converstation puzzle in MotelExterior, talking to the person behind the door.
+private function MotelEscapee() {
+	// This is how you make a dialogue. Keep adding children to it to make it branchable.
+	
+	var motelRoot:DialogueLine;
+	var child1:DialogueLine;
+	var child2:DialogueLine;
+	var child3:DialogueLine;
+
+	
+	
+	// The unique ID, "TestStart", should be unique for everything since that's how we
+	// find these later.
+	motelRoot = new DialogueLine("Stay back! I don't want any trouble, but I swear if you try anything funny, something bad will happen.", "MotelStart", true, null, null);
+	
+	// You don't need an image or audio for dialogue lines, so you can keep them null or
+	// just leave them out if there aren't any.
+	// Otherwise, make global Texture2D and AudioClip variables that you can drag in from
+	// the editor.
+	child1 = new DialogueLine("Whoa there, I mean you no harm. Listen, I'm just trying to get outta town just like you.", "MotelResponse1", true);
+	
+	// If the default enabled state is true, you can just leave it out from the constructor, too.
+	// This makes it a lot simpler. 
+	child2 = new DialogueLine("Heh, I'd love to see you try. I mean, I can raise my voice a little louder if you want so we can invite those nice looking fellows outside.", "MotelResponse2");
+	child3 = new DialogueLine("Look, I just want to get out of this city before something worse than this level of destruction happens, just let me through.", "MotelResponse3");
+
+
+	// If this went on longer, we could add children to the children, too.
+	motelRoot.AddChild(child1);
+	motelRoot.AddChild(child2);
+	motelRoot.AddChild(child3);
+
+
+
+
+	
+	DialogueRoots.Add(motelRoot);	
+	
+	// The conversation would be started using DialogueSystem.StartDialogue("id"); from any other
+	// script.
+	// We can set enabled by calling DialogueSystem.SetEnabled("id", false); from any other script.
+	// There are more functions, too. See below.
+}
+
+
+
+
+
+
 /*
  * The rest of this code is the actual implementation of the dialogue
  * system. It shouldn't be edited unless you know what you're doing.

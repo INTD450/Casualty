@@ -62,6 +62,17 @@ ModelImporter:
     4300016: Object007
     4300018: Object008
     4300020: Object009
+    6400000: batterycover
+    6400002: Object001
+    6400004: Object002
+    6400006: Object003
+    6400008: Object004
+    6400010: Object005
+    6400012: Object006
+    6400014: Object007
+    6400016: Object008
+    6400018: Object009
+    6400020: plasticcase
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -83,7 +94,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: .00999999978
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_GENERICS;ENABLE_SUBSTANCE;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_3_4;UNITY_4_3;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;Main;Camera</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_GENERICS;ENABLE_SUBSTANCE;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_3_4;UNITY_4_3;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX;Main;Camera</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -57,10 +57,14 @@
      <Compile Include="Assets\Inventory\Scripts\Other\InvAudio.js" />
      <Compile Include="Assets\Inventory\Scripts\Other\InvPauseGame.js" />
      <Compile Include="Assets\Inventory\Scripts\Other\WeaponSwitch.js" />
+     <Compile Include="Assets\Scripts\Aggressors\AggressorShoot.js" />
+     <Compile Include="Assets\Scripts\Aggressors\AggressorWalk.js" />
+     <Compile Include="Assets\Scripts\Aggressors\checkDistanceToPlayer.js" />
      <Compile Include="Assets\Scripts\DeathCounter.js" />
      <Compile Include="Assets\Scripts\DialogueSystem.js" />
      <Compile Include="Assets\Scripts\HallMate1.js" />
      <Compile Include="Assets\Scripts\HallMate2.js" />
+     <Compile Include="Assets\Scripts\InventoryBin.js" />
      <Compile Include="Assets\Scripts\OnClick\ClickableManager.js" />
      <Compile Include="Assets\Scripts\OnClick\ClickableObject.js" />
      <Compile Include="Assets\Scripts\OnClick\LampSwitchClickAction.js" />
@@ -68,14 +72,20 @@
      <Compile Include="Assets\Scripts\OnClick\ShowTextOnClickAction.js" />
      <Compile Include="Assets\Scripts\OnClick\StartDialogueAction.js" />
      <Compile Include="Assets\Scripts\OnClick\TurnGreenOnClickAction.js" />
-     <Compile Include="Assets\Scripts\Roomdoor.js" />
      <Compile Include="Assets\Scripts\SaveLoadSystem.js" />
      <Compile Include="Assets\Scripts\Third Person\Animations.js" />
      <Compile Include="Assets\Scripts\Third Person\MoveCamera.js" />
      <Compile Include="Assets\Scripts\Third Person\MoveCharacter.js" />
-     <Compile Include="Assets\Scripts\checkDistance.js" />
-     <Compile Include="Assets\Scripts\checkDistanceToPlayer.js" />
-     <Compile Include="Assets\Scripts\screenFader.js" />
+     <Compile Include="Assets\Scripts\Transitions\ExteriorMotelDoor.js" />
+     <Compile Include="Assets\Scripts\Transitions\HospitalDoor.js" />
+     <Compile Include="Assets\Scripts\Transitions\InteriorMotelDoor.js" />
+     <Compile Include="Assets\Scripts\Transitions\Roomdoor.js" />
+     <Compile Include="Assets\Scripts\Transitions\StoreDoor1.js" />
+     <Compile Include="Assets\Scripts\Transitions\screenFader.js" />
+     <Compile Include="Assets\Scripts\Transitions\teleport.js" />
+     <Compile Include="Assets\Scripts\sniperCollision.js" />
+     <Compile Include="Assets\Scripts\staticInventory.js" />
+     <Compile Include="Assets\Scripts\storeCollision.js" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Specular.shader" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Opaque Bump.shader" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Transparent.shader" />

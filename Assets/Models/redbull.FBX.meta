@@ -14,12 +14,19 @@ ModelImporter:
     2300000: Redbull
     2300002: redbulltexture
     2300004: tab
+    2300006: //RootNode
     3300000: Redbull
     3300002: redbulltexture
     3300004: tab
+    3300006: //RootNode
     4300000: Redbull
     4300002: tab
     4300004: redbulltexture
+    4300006: Redbull001
+    6400000: Redbull
+    6400002: //RootNode
+    6400004: redbulltexture
+    6400006: tab
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -41,7 +48,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: .00999999978
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

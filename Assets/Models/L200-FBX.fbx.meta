@@ -44,6 +44,13 @@ ModelImporter:
     4300008: Left_Front
     4300010: Right_Front
     4300012: TruckBody
+    6400000: Left_Front
+    6400002: Left_Rear
+    6400004: Left_Wiper
+    6400006: Right_Front
+    6400008: Right_Rear
+    6400010: Right_Wiper
+    6400012: TruckBody
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -65,7 +72,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: .00999999978
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

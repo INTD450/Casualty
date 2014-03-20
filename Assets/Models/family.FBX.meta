@@ -1,0 +1,248 @@
+fileFormatVersion: 2
+guid: 1bdd94584f72bc84ab338ee08b8dcb74
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bip001
+    100002: Bip001 Footsteps
+    100004: Bip001 Head
+    100006: Bip001 HeadNub
+    100008: Bip001 L Calf
+    100010: Bip001 L Clavicle
+    100012: Bip001 L Foot
+    100014: Bip001 L Forearm
+    100016: Bip001 L Hand
+    100018: Bip001 L Thigh
+    100020: Bip001 L Toe0
+    100022: Bip001 L Toe0Nub
+    100024: Bip001 L UpperArm
+    100026: Bip001 Neck
+    100028: Bip001 Pelvis
+    100030: Bip001 R Calf
+    100032: Bip001 R Clavicle
+    100034: Bip001 R Foot
+    100036: Bip001 R Forearm
+    100038: Bip001 R Hand
+    100040: Bip001 R Thigh
+    100042: Bip001 R Toe0
+    100044: Bip001 R Toe0Nub
+    100046: Bip001 R UpperArm
+    100048: Bip001 Spine
+    100050: Bip001 Spine1
+    100052: Bip001 Spine2
+    100054: Bip001 Spine3
+    100056: //RootNode
+    100058: father
+    100060: father 1
+    100062: father Footsteps
+    100064: father Head
+    100066: father HeadNub
+    100068: father L Calf
+    100070: father L Clavicle
+    100072: father L Foot
+    100074: father L Forearm
+    100076: father L Hand
+    100078: father L Thigh
+    100080: father L Toe0
+    100082: father L Toe0Nub
+    100084: father L UpperArm
+    100086: father Neck
+    100088: father Pelvis
+    100090: father R Calf
+    100092: father R Clavicle
+    100094: father R Foot
+    100096: father R Forearm
+    100098: father R Hand
+    100100: father R Thigh
+    100102: father R Toe0
+    100104: father R Toe0Nub
+    100106: father R UpperArm
+    100108: father Spine
+    100110: father Spine1
+    100112: father Spine2
+    100114: father Spine3
+    100116: kid
+    100118: kid 1
+    100120: kid Footsteps
+    100122: kid Head
+    100124: kid HeadNub
+    100126: kid L Calf
+    100128: kid L Clavicle
+    100130: kid L Foot
+    100132: kid L Forearm
+    100134: kid L Hand
+    100136: kid L Thigh
+    100138: kid L Toe0
+    100140: kid L Toe0Nub
+    100142: kid L UpperArm
+    100144: kid Neck
+    100146: kid Pelvis
+    100148: kid R Calf
+    100150: kid R Clavicle
+    100152: kid R Foot
+    100154: kid R Forearm
+    100156: kid R Hand
+    100158: kid R Thigh
+    100160: kid R Toe0
+    100162: kid R Toe0Nub
+    100164: kid R UpperArm
+    100166: kid Spine
+    100168: kid Spine1
+    100170: kid Spine2
+    100172: kid Spine3
+    100174: mother
+    100176: Particle View 001
+    100178: Particle View 002
+    400000: Bip001
+    400002: Bip001 Footsteps
+    400004: Bip001 Head
+    400006: Bip001 HeadNub
+    400008: Bip001 L Calf
+    400010: Bip001 L Clavicle
+    400012: Bip001 L Foot
+    400014: Bip001 L Forearm
+    400016: Bip001 L Hand
+    400018: Bip001 L Thigh
+    400020: Bip001 L Toe0
+    400022: Bip001 L Toe0Nub
+    400024: Bip001 L UpperArm
+    400026: Bip001 Neck
+    400028: Bip001 Pelvis
+    400030: Bip001 R Calf
+    400032: Bip001 R Clavicle
+    400034: Bip001 R Foot
+    400036: Bip001 R Forearm
+    400038: Bip001 R Hand
+    400040: Bip001 R Thigh
+    400042: Bip001 R Toe0
+    400044: Bip001 R Toe0Nub
+    400046: Bip001 R UpperArm
+    400048: Bip001 Spine
+    400050: Bip001 Spine1
+    400052: Bip001 Spine2
+    400054: Bip001 Spine3
+    400056: //RootNode
+    400058: father
+    400060: father 1
+    400062: father Footsteps
+    400064: father Head
+    400066: father HeadNub
+    400068: father L Calf
+    400070: father L Clavicle
+    400072: father L Foot
+    400074: father L Forearm
+    400076: father L Hand
+    400078: father L Thigh
+    400080: father L Toe0
+    400082: father L Toe0Nub
+    400084: father L UpperArm
+    400086: father Neck
+    400088: father Pelvis
+    400090: father R Calf
+    400092: father R Clavicle
+    400094: father R Foot
+    400096: father R Forearm
+    400098: father R Hand
+    400100: father R Thigh
+    400102: father R Toe0
+    400104: father R Toe0Nub
+    400106: father R UpperArm
+    400108: father Spine
+    400110: father Spine1
+    400112: father Spine2
+    400114: father Spine3
+    400116: kid
+    400118: kid 1
+    400120: kid Footsteps
+    400122: kid Head
+    400124: kid HeadNub
+    400126: kid L Calf
+    400128: kid L Clavicle
+    400130: kid L Foot
+    400132: kid L Forearm
+    400134: kid L Hand
+    400136: kid L Thigh
+    400138: kid L Toe0
+    400140: kid L Toe0Nub
+    400142: kid L UpperArm
+    400144: kid Neck
+    400146: kid Pelvis
+    400148: kid R Calf
+    400150: kid R Clavicle
+    400152: kid R Foot
+    400154: kid R Forearm
+    400156: kid R Hand
+    400158: kid R Thigh
+    400160: kid R Toe0
+    400162: kid R Toe0Nub
+    400164: kid R UpperArm
+    400166: kid Spine
+    400168: kid Spine1
+    400170: kid Spine2
+    400172: kid Spine3
+    400174: mother
+    400176: Particle View 001
+    400178: Particle View 002
+    4300000: father
+    4300002: kid
+    4300004: mother
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: father 1
+    13700002: kid
+    13700004: mother
+    13700006: father
+    13700008: kid 1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
