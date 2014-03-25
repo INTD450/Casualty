@@ -79,7 +79,6 @@
      <Compile Include="Assets\Scripts\Transitions\ExteriorMotelDoor.js" />
      <Compile Include="Assets\Scripts\Transitions\HospitalDoor.js" />
      <Compile Include="Assets\Scripts\Transitions\InteriorMotelDoor.js" />
-     <Compile Include="Assets\Scripts\Transitions\Roomdoor.js" />
      <Compile Include="Assets\Scripts\Transitions\StoreDoor1.js" />
      <Compile Include="Assets\Scripts\Transitions\screenFader.js" />
      <Compile Include="Assets\Scripts\Transitions\teleport.js" />

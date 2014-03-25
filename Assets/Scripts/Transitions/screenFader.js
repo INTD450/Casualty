@@ -7,8 +7,6 @@ private var sceneStarting : boolean = true;     // Whether or not the scene is s
 private var currentScene:int;
 
 public var endGame : boolean = false ;         //This will remain false until the player dies
-var deathButton : KeyCode = KeyCode.P;  //The button that simulates death.
-var deathButton2 : KeyCode = KeyCode.O; //The button that simulates death.
 
 //Death counter script
 static var deathCounter : DeathCounter;
@@ -41,22 +39,6 @@ function Update ()
      	//Call the endScene function
      	EndScene(currentScene);
      }
-     
-     
-    //Simulate death for scene 0
-	if(Input.GetKeyDown(deathButton)){
-	//Adding 1 to the death counter
-	deathCounter.Add(1);
-		setEndGame();
-		currentScene=0;
-	}
-	//Simulate death for scene 1
-	if(Input.GetKeyDown(deathButton2)){
-		//Adding 1 to the death counter
-		deathCounter.Add(1);
-		setEndGame();
-		currentScene=1;
-	}
 }
 
 function setScene(scene: int){
@@ -83,6 +65,8 @@ function FadeToBlack ()
 
 function StartScene ()
 {
+    Time.timeScale = 1;
+    
     // Fade the texture to clear.
     FadeToClear();
     
@@ -95,7 +79,7 @@ function StartScene ()
         
         // The scene is no longer starting.
         sceneStarting = false;
-        Time.timeScale = 1;
+        
     }
 }
 

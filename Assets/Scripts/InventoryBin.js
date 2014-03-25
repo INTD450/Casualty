@@ -23,11 +23,24 @@ static var bin : staticInventory;
 //Instance of gameobject
 private var stuff : GameObject;
 
+//Death Counter script
+static var deathCounterScript : DeathCounter;
+
 
 function Awake ()
 {   
+
+	//Finding the Inventory script
    associatedInventory = FindObjectOfType(Inventory);
+   
+   //Finding the staticInventory script
    bin = FindObjectOfType(staticInventory);
+   
+   	//finding the death counter script	
+	deathCounterScript = FindObjectOfType(DeathCounter); 
+   
+   //Re-initialized the death counter in static inventory 
+   bin.setDeathCounter(deathCounterScript.Count());
    
    Debug.Log("Awake");
 	for(var i in bin.Items){	
@@ -42,7 +55,7 @@ function Awake ()
 		var clone = Instantiate(Resources.Load(i, typeof(GameObject))) as GameObject;
 		
 		
-		//Remove the word clone in it
+		//Remove the word clone from it
 		clone.name = i;
 		
 		//Add into inventory
@@ -59,17 +72,19 @@ function Update (){
 		gameStuff.Add(i.name);
 		Debug.Log(i+"-"+i.name);
 	}
+	
+		//For debugging purposes
+		for(var i in bin.getItem()){
+			Debug.Log("BIN )-"+i+"-");
+		}
 }
 
 
 function OnDestroy () {
-	//Adding items
-	bin.setItem(gameStuff);
-	
-	for(var i in bin.getItem()){
-		Debug.Log(i+"-");
+	//If you didnt die, you inventory system will be updated, else you just restart the level with the same inventory
+	if(deathCounterScript.Count() == bin.getDeathCounter()){
+		//Adding items
+		bin.setItem(gameStuff);
 	}
-
-
 	Debug.Log("Script was destroyed");
 }
