@@ -19,10 +19,12 @@ ModelImporter:
     2300002: Line006
     2300004: Slide
     2300006: shotgun
+    2300008: //RootNode
     3300000: Cylinder001
     3300002: Line006
     3300004: Slide
     3300006: shotgun
+    3300008: //RootNode
     4300000: Line006
     4300002: Slide
     4300004: Cylinder001
@@ -31,6 +33,7 @@ ModelImporter:
     6400002: Line006
     6400004: shotgun
     6400006: Slide
+    6400008: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1

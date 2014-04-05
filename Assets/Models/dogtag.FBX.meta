@@ -91,6 +91,8 @@ ModelImporter:
     100170: sphere081
     100172: sphere082
     100174: sphere083
+    100176: dogtag_MeshPart0
+    100178: dogtag_MeshPart1
     400000: ChamferBox001
     400002: ChamferBox002
     400004: //RootNode
@@ -179,6 +181,8 @@ ModelImporter:
     400170: sphere081
     400172: sphere082
     400174: sphere083
+    400176: dogtag_MeshPart0
+    400178: dogtag_MeshPart1
     2300000: ChamferBox001
     2300002: ChamferBox002
     2300004: //RootNode
@@ -266,6 +270,8 @@ ModelImporter:
     2300168: sphere081
     2300170: sphere082
     2300172: sphere083
+    2300174: dogtag_MeshPart0
+    2300176: dogtag_MeshPart1
     3300000: ChamferBox001
     3300002: ChamferBox002
     3300004: //RootNode
@@ -353,6 +359,8 @@ ModelImporter:
     3300168: sphere081
     3300170: sphere082
     3300172: sphere083
+    3300174: dogtag_MeshPart0
+    3300176: dogtag_MeshPart1
     4300000: dogtag
     4300002: ChamferBox001
     4300004: ChamferBox002
@@ -440,6 +448,8 @@ ModelImporter:
     4300168: sphere002
     4300170: sphere001
     4300172: sphere
+    4300174: dogtag_MeshPart0
+    4300176: dogtag_MeshPart1
     6400000: ChamferBox001
     6400002: ChamferBox002
     6400004: //RootNode
@@ -527,6 +537,8 @@ ModelImporter:
     6400168: sphere081
     6400170: sphere082
     6400172: sphere083
+    6400174: dogtag_MeshPart0
+    6400176: dogtag_MeshPart1
     9500000: //RootNode
   materials:
     importMaterials: 1

@@ -17,8 +17,11 @@ static var num = 0;
 
 static var gameStuff = new ArrayList();
 
-//Keeping track of components.
+//Keeping track of components statically
 static var bin : staticInventory;
+
+//Keeping tracks of dynamic components
+static var dynamic : dynamicInventory;
 
 //Instance of gameobject
 private var stuff : GameObject;
@@ -35,6 +38,9 @@ function Awake ()
    
    //Finding the staticInventory script
    bin = FindObjectOfType(staticInventory);
+   
+   //Finding the dynamicInventory script
+   dynamic = FindObjectOfType(dynamicInventory);
    
    	//finding the death counter script	
 	deathCounterScript = FindObjectOfType(DeathCounter); 
@@ -77,6 +83,11 @@ function Update (){
 		for(var i in bin.getItem()){
 			Debug.Log("BIN )-"+i+"-");
 		}
+		
+	//Constantly update dynamic inventory
+	Debug.Log("Updating dynamic");
+	dynamic.setItem(gameStuff);
+	
 }
 
 

@@ -61,6 +61,10 @@
      <Compile Include="Assets\Scripts\Aggressors\AggressorWalk.js" />
      <Compile Include="Assets\Scripts\Aggressors\checkDistanceToPlayer.js" />
      <Compile Include="Assets\Scripts\DeathCounter.js" />
+     <Compile Include="Assets\Scripts\Dialogue\EscapeeStartDialogue.js" />
+     <Compile Include="Assets\Scripts\Dialogue\FamilyStartDialogue.js" />
+     <Compile Include="Assets\Scripts\Dialogue\HidingPersonStartDialogue.js" />
+     <Compile Include="Assets\Scripts\Dialogue\PilotStartDialogue.js" />
      <Compile Include="Assets\Scripts\DialogueSystem.js" />
      <Compile Include="Assets\Scripts\HallMate1.js" />
      <Compile Include="Assets\Scripts\HallMate2.js" />
@@ -79,7 +83,6 @@
      <Compile Include="Assets\Scripts\Transitions\ExteriorMotelDoor.js" />
      <Compile Include="Assets\Scripts\Transitions\HospitalDoor.js" />
      <Compile Include="Assets\Scripts\Transitions\InteriorMotelDoor.js" />
-     <Compile Include="Assets\Scripts\Transitions\StoreDoor1.js" />
      <Compile Include="Assets\Scripts\Transitions\screenFader.js" />
      <Compile Include="Assets\Scripts\Transitions\teleport.js" />
      <Compile Include="Assets\Scripts\sniperCollision.js" />

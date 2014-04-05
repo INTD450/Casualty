@@ -40,6 +40,7 @@ ModelImporter:
     2300016: Object008
     2300018: Object009
     2300020: plasticcase
+    2300022: //RootNode
     3300000: batterycover
     3300002: Object001
     3300004: Object002
@@ -51,6 +52,7 @@ ModelImporter:
     3300016: Object008
     3300018: Object009
     3300020: plasticcase
+    3300022: //RootNode
     4300000: batterycover
     4300002: plasticcase
     4300004: Object001
@@ -62,6 +64,7 @@ ModelImporter:
     4300016: Object007
     4300018: Object008
     4300020: Object009
+    4300022: BatteryCase
     6400000: batterycover
     6400002: Object001
     6400004: Object002
@@ -73,6 +76,7 @@ ModelImporter:
     6400016: Object008
     6400018: Object009
     6400020: plasticcase
+    6400022: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1

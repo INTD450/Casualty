@@ -1,10 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DialogueSystem.js">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../INTD 450/Prototype/Assets/Scripts/dynamicInventory.js">
     <Files>
-      <File FileName="Assets/Scripts/DialogueSystem.js" Line="82" Column="34" />
-      <File FileName="Assets/Scripts/InventoryBin.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/staticInventory.js" Line="43" Column="15" />
+      <File FileName="../../../Desktop/UnityGame/Assets/Scripts/InventoryBin.js" Line="24" Column="1" />
+      <File FileName="../../../Desktop/UnityGame/Assets/Scripts/staticInventory.js" Line="8" Column="1" />
+      <File FileName="../../INTD 450/Prototype/Assets/Scripts/dynamicInventory.js" Line="44" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
