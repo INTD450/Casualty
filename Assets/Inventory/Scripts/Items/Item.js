@@ -21,7 +21,7 @@ var Player : GameObject ;
 var BackpackFinal : GameObject;
 var pMesh : Mesh;
 var bMesh : Mesh;
-
+var dist: int;
 private var FPPickUpFound = false;
 
 @script AddComponentMenu ("Inventory/Items/Item")
@@ -48,7 +48,7 @@ function Awake ()
 	
 	if (isEquipment == false && GetComponent(ItemEffect) == null)
 	{
-		Debug.LogError(gameObject.name + " is not equipment so please assign an ItemEffect script to it");
+		//Debug.LogError(gameObject.name + " is not equipment so please assign an ItemEffect script to it");
 	}
 	
 	if (GetComponent(FirstPersonPickUp) != null)
@@ -67,6 +67,11 @@ function Awake ()
 
  
 
+function Update ()
+{
+	play = GameObject.Find("Player");
+	dist = Vector3.Distance(play.transform.position, this.transform.position);
+}
 
 
 
@@ -75,7 +80,8 @@ function OnMouseDown()
 {
 	//If the 'FirstPersonPickUp' script is not attached we want to pick up the item.
 	//And bag is picked up already (meaning inventory is activated)
-	if ((FPPickUpFound == false) && (display.haveBag==1))
+	//And if player to close to item
+	if ((FPPickUpFound == false) && (display.haveBag==1) && (dist<=15))
 	{
 		PickUpItem();
 	} 
@@ -83,6 +89,7 @@ function OnMouseDown()
 	//If you pick up the bag
 	if(this.gameObject.name == "BackpackFinal"){
 		display.haveBag = 1;
+		Destroy(this.gameObject);
 		//Destroy it so it doesnt appear in the inventory itself
 		playersinv.RemoveItem(this.transform);
 	}

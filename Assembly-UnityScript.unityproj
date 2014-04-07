@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{E5A30B33-FB62-AF48-82F7-93DBF772D63C}</ProjectGuid>
+	<ProjectGuid>{BE909DC4-7DB3-0E37-DECF-37407DCC3F42}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -66,9 +66,13 @@
      <Compile Include="Assets\Scripts\Dialogue\HidingPersonStartDialogue.js" />
      <Compile Include="Assets\Scripts\Dialogue\PilotStartDialogue.js" />
      <Compile Include="Assets\Scripts\DialogueSystem.js" />
+     <Compile Include="Assets\Scripts\Epilogue.js" />
      <Compile Include="Assets\Scripts\HallMate1.js" />
      <Compile Include="Assets\Scripts\HallMate2.js" />
+     <Compile Include="Assets\Scripts\HidingPersonAlleyAnimate.js" />
      <Compile Include="Assets\Scripts\InventoryBin.js" />
+     <Compile Include="Assets\Scripts\ItemNews.js" />
+     <Compile Include="Assets\Scripts\Newspaper.js" />
      <Compile Include="Assets\Scripts\OnClick\ClickableManager.js" />
      <Compile Include="Assets\Scripts\OnClick\ClickableObject.js" />
      <Compile Include="Assets\Scripts\OnClick\LampSwitchClickAction.js" />
@@ -76,7 +80,9 @@
      <Compile Include="Assets\Scripts\OnClick\ShowTextOnClickAction.js" />
      <Compile Include="Assets\Scripts\OnClick\StartDialogueAction.js" />
      <Compile Include="Assets\Scripts\OnClick\TurnGreenOnClickAction.js" />
+     <Compile Include="Assets\Scripts\Prologue.js" />
      <Compile Include="Assets\Scripts\SaveLoadSystem.js" />
+     <Compile Include="Assets\Scripts\StartMovie.js" />
      <Compile Include="Assets\Scripts\Third Person\Animations.js" />
      <Compile Include="Assets\Scripts\Third Person\MoveCamera.js" />
      <Compile Include="Assets\Scripts\Third Person\MoveCharacter.js" />
@@ -85,6 +91,8 @@
      <Compile Include="Assets\Scripts\Transitions\InteriorMotelDoor.js" />
      <Compile Include="Assets\Scripts\Transitions\screenFader.js" />
      <Compile Include="Assets\Scripts\Transitions\teleport.js" />
+     <Compile Include="Assets\Scripts\dynamicInventory.js" />
+     <Compile Include="Assets\Scripts\hospitalCollision.js" />
      <Compile Include="Assets\Scripts\sniperCollision.js" />
      <Compile Include="Assets\Scripts\staticInventory.js" />
      <Compile Include="Assets\Scripts\storeCollision.js" />

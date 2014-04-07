@@ -27,6 +27,13 @@ function Awake ()
 //Add an item to the inventory.
 function AddItem(Item:Transform)
 {
+	//Play backpack rustle sound
+	var audioBack = Instantiate(Resources.Load("Backpack rustle", typeof(GameObject))) as GameObject;
+	var audioBack1 = audioBack.GetComponent(AudioSource);
+	audioBack1.Play();
+	audioBack.name = "Backpack rustle";
+	Destroy(audioBack,1.0);
+
 	var newContents = new Array(Contents);
 	newContents.Add(Item);
 	Contents=newContents.ToBuiltin(Transform); //Array to unity builtin array

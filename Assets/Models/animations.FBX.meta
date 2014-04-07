@@ -74,6 +74,7 @@ ModelImporter:
     7400010: sniper shooting
     7400012: dying
     9500000: //RootNode
+    11100000: //RootNode
     13700000: Character
   materials:
     importMaterials: 1
@@ -525,7 +526,7 @@ ModelImporter:
     - serializedVersion: 16
       name: hiding
       takeName: Take 001
-      firstFrame: 230
+      firstFrame: 240
       lastFrame: 320
       wrapMode: 0
       orientationOffsetY: 0
@@ -881,6 +882,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   additionalBone: 0
   userData: 

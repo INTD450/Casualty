@@ -44,9 +44,18 @@ function Update (){
 function OnMouseDown () {
 	//If have bag
 	if (display.haveBag==1){
-		//Increase current scene to 1
-		screen.setScene(1);
-		screen.setEndGame();	
+		//Play opening door sound
+		var audioOpen = Instantiate(Resources.Load("Door Open", typeof(GameObject))) as GameObject;
+		var audioOpen1 = audioOpen.GetComponent(AudioSource);
+		audioOpen1.Play();
+		audioOpen.name = "Door Open";
+		Destroy(audioOpen,1.0);
+	
+		//Increase current scene to 3
+		screen.setScene(3);
+		
+		//End scene
+		screen.setEndGame();
 	}
 	else{
 	Debug.Log("You dont have bag");

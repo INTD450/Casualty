@@ -12,7 +12,7 @@ static var deathCounter : DeathCounter;
 //Inventory script
 static var display : InventoryDisplay;
 
-//BackDoorExit
+//Player object
 static var play : GameObject;
 
 static var once : int = 0;

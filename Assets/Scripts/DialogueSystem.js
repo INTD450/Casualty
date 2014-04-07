@@ -6,6 +6,14 @@ import System.Collections.Generic;
 static var screen : screenFader;
 //Death counter script
 static var deathCounter : DeathCounter;
+// Keeping tracks of Inventory
+static var dynamic : dynamicInventory;
+static var inv : Inventory;
+// Other dialogue scripts
+static var instanceEscapeeStartDialogue:EscapeeStartDialogue;
+static var instanceFamilyStartDialogue:FamilyStartDialogue;
+static var instancePilotStartDialogue:PilotStartDialogue;
+static var instanceHidingPersonStartDialogue:HidingPersonStartDialogue;
 
 function Start () {
 	RegisterExampleDialogue();
@@ -18,11 +26,15 @@ function Start () {
 	PilotSecondEncounter();
 	ChildEncounter();
 	
-	//finding the screen fader script
-	screen = FindObjectOfType(screenFader); 
-	
-	//finding the death counter script
+	//finding All the things
+	screen = FindObjectOfType(screenFader);
 	deathCounter = FindObjectOfType(DeathCounter);
+	instanceEscapeeStartDialogue = FindObjectOfType(EscapeeStartDialogue);
+	instanceFamilyStartDialogue = FindObjectOfType(FamilyStartDialogue);
+	instancePilotStartDialogue = FindObjectOfType(PilotStartDialogue);
+	instanceHidingPersonStartDialogue = FindObjectOfType(HidingPersonStartDialogue);
+	dynamic = FindObjectOfType(dynamicInventory);
+	inv = FindObjectOfType(Inventory);
 }
 
 // Make one of these functions for every conversation to keep things clean.
@@ -203,8 +215,8 @@ private function MotelEscapee() {
 	AddWhenReachedFunction("MotelBranch3A2",deathTwo);
 	AddWhenReachedFunction("MotelBranch3B2",deathTwo);
 	AddWhenReachedFunction("MotelBranch3C2",deathTwo);
-	// remove first aid kit from inventory ******************************************************************************
-	//AddWhenReachedFunction("MotelBranch3E",);
+	// remove first aid kit from inventory
+	AddWhenReachedFunction("MotelBranch3E", RemoveItemFirstAid);
 	// Transition
 	AddWhenReachedFunction("MotelBranch1B1A", AlleyGo);
 
@@ -409,6 +421,10 @@ private function FamilyFirstEncounter() {
 	familyBranch1A2Response.AddChild(familyBranch1D);
 	familyBranch1AA.AddChild(familyBranch2Response);
 	familyBranch2A1AResponse.AddChild(familyBranch1D);
+
+	// Remove chips or yoyo or gameboy from inventory
+	AddWhenReachedFunction("FamilyBranch1B", RemoveItemFood);  // remove doritos1, doritos2, lays
+	AddWhenReachedFunction("FamilyBranch1C", RemoveItemToy);  // remove Gameboy or yoyo
 	
 	DialogueRoots.Add(familyRootFirst);
 }
@@ -468,7 +484,7 @@ private function PilotFirstEncounter() {
 	var pilotBranch1A2A1:DialogueLine;
 
 	// The unique ID: PilotFirstEncounter
-	pilotRoot = new DialogueLine("Stay back! It’s not safe! There’s a sniper up above on the building to your right.", "PilotFirstEncounter", true, null, null);
+	pilotRoot = new DialogueLine("Stay back! It’s not safe! There’s a sniper up above on the building to my right.", "PilotFirstEncounter", true, null, null);
 	// First Choices
 	pilotBranch1 = new DialogueLine("What!? Why!? Why did they shoot at you?!", "PilotBranch1");
 	pilotBranch2 = new DialogueLine("Really?! I guess can't tell from the dead body in front of me.", "PilotBranch2");
@@ -477,10 +493,10 @@ private function PilotFirstEncounter() {
 	pilotBranch2Response = new DialogueLine("Watch your tone! It could've been you who I was trying to help.", "PilotBranch2Response");
 
 	// Second Choices
-	pilotBranch1A = new DialogueLine("Hold on, if they are military and are trying to kill you, who are you?", "PilotBranch1A");
-	pilotBranch1B = new DialogueLine("Well, can't you do something!? There are people with guns back at the motel and there is no where else to go!", "PilotBranch1B");
+	pilotBranch1A = new DialogueLine("Hold on, if they are military and are\ntrying to kill you, who are you?", "PilotBranch1A");
+	pilotBranch1B = new DialogueLine("Well, can't you do something!? There are people with guns\nback at the motel and there is no where else to go!", "PilotBranch1B");
 	pilotBranch2A = new DialogueLine("Well that worked out nicely didn't it?", "PilotBranch2A");
-	pilotBranch2B = new DialogueLine("Sorry, I just have no idea what is going on. It’s bloody frustrating and sometimes my mouth just runs off.", "PilotBranch2B");
+	pilotBranch2B = new DialogueLine("Sorry, I just have no idea what is going on. It’s bloody\nfrustrating and sometimes my mouth just runs off.", "PilotBranch2B");
 	// Second Responses
 	pilotBranch1AResponse = new DialogueLine("I'm... unaffiliated. Look, things are complicated, but if you can help me out we can get to the hospital.", "PilotBranch1AResponse");
 	pilotBranch1BResponse = new DialogueLine("I need to get up to the roof to take out the sniper, so we can get to the hospital. Unless you are actually armed, in which case you can try to take care of it yourself.", "PilotBranch1BResponse");
@@ -490,7 +506,7 @@ private function PilotFirstEncounter() {
 	// Third Choices
 	pilotBranch1A1 = new DialogueLine("What’s at the hospital?", "PilotBranch1A1");
 	pilotBranch1A2 = new DialogueLine("Alright, what do you need me to do?", "PilotBranch1A2");
-	pilotBranch1B1 = new DialogueLine("Alright, if you can get me out of here I’ll help. What do you need me to do?", "PilotBranch1B1");
+	pilotBranch1B1 = new DialogueLine("Alright, if you can get me out of here\nI’ll help. What do you need me to do?", "PilotBranch1B1");
 	// Third Responses
 	pilotBranch1A1Response = new DialogueLine("There's a helicopter there. If we can get access to it, I can fly us out of here.", "PilotBranch1A1Response");
 	pilotBranch1A2Response = new DialogueLine("Find something that I can use to scale a wall so I can take this bastard out.", "PilotBranch1A2Response");
@@ -536,8 +552,12 @@ private function PilotFirstEncounter() {
 	pilotBranch1A2A.AddChild(pilotBranch1A2AResponse);
 	pilotBranch1A2AResponse.AddChild(pilotBranch1A2A1);
 
-	// CALL END OF GAME HERE *****************************************************************************************
-	//AddWhenReachedFunction("PilotBranch1A2A1",);
+	// remove Ladder/rope from inventory
+	AddWhenReachedFunction("PilotBranch1A2A", RemoveItemLadderRope);
+
+
+	// End of game
+	AddWhenReachedFunction("PilotBranch1A2A1", EndGamePilot);
 
 	DialogueRoots.Add(pilotRoot);
 }
@@ -560,7 +580,7 @@ private function PilotSecondEncounter() {
 	pilotBranchSecond2 = new DialogueLine("Yeah, do you think this will work?", "PilotBranchSecond2", false);
 	// First Responses
 	pilotBranchSecond1Response = new DialogueLine("Hurry please, the longer we stay here the more dangerous it becomes.", "PilotBranchSecond1Response");
-	pilotBranchSecond2Response = new DialogueLine("Yes, slide it over! Wait there while I take care of our little problem.", "PilotBranchSecond2Response");
+	pilotBranchSecond2Response = new DialogueLine("Yeah, hand it over! Wait there while I take care of our little problem.", "PilotBranchSecond2Response");
 	// Second Choices
 	pilotBranchSecondA = new DialogueLine("[Continue]", "PilotBranchSecondA");
 	pilotBranchSecondB = new DialogueLine("[Leave]", "PilotBranchSecondB");
@@ -572,8 +592,11 @@ private function PilotSecondEncounter() {
 	pilotBranchSecond1Response.AddChild(pilotBranchSecondB);
 	pilotBranchSecond2Response.AddChild(pilotBranchSecondA);
 
-	// CALL END OF GAME HERE *****************************************************************************************
-	//AddWhenReachedFunction("PilotBranchSecondA",);
+// remove Ladder/rope from inventory
+	AddWhenReachedFunction("PilotBranchSecond2", RemoveItemLadderRope);
+
+	// End of game
+	AddWhenReachedFunction("PilotBranchSecondA", EndGamePilot);
 	
 	DialogueRoots.Add(pilotRootSecond);
 }
@@ -629,6 +652,16 @@ static function AddWhenReachedFunction(id:String, funxion:Function) {
 * The death script
 */
 public function death(){
+	// Reset met toggles
+	if(instanceEscapeeStartDialogue)
+		instanceEscapeeStartDialogue.resetToZero();
+	if(instanceFamilyStartDialogue)
+		instanceFamilyStartDialogue.resetToZero();
+	if(instancePilotStartDialogue)
+		instancePilotStartDialogue.resetToZero();
+	if(instanceHidingPersonStartDialogue)
+		instanceHidingPersonStartDialogue.resetToZero();
+
 	//Calling the Add function in the deathCounter script
 	deathCounter.Add(1);
 	//Calling the setEndGame function in the screen Script
@@ -639,6 +672,16 @@ public function death(){
 * The death script for two people
 */
 public function deathTwo(){
+	// Reset met toggles
+	if(instanceEscapeeStartDialogue)
+		instanceEscapeeStartDialogue.resetToZero();
+	if(instanceFamilyStartDialogue)
+		instanceFamilyStartDialogue.resetToZero();
+	if(instancePilotStartDialogue)
+		instancePilotStartDialogue.resetToZero();
+	if(instanceHidingPersonStartDialogue)
+		instanceHidingPersonStartDialogue.resetToZero();
+
 	//Calling the Add function in the deathCounter script
 	deathCounter.Add(2);
 	//Calling the setEndGame function in the screen Script
@@ -649,8 +692,144 @@ public function deathTwo(){
  * Transition to alley script
  */
 function AlleyGo() {
-	screen.setScene(2);
+	screen.setScene(4);
 	screen.setEndGame();
+}
+
+/*
+ * End game script
+ */
+function EndGamePilot() {
+	//screen.setScene(5);
+	//screen.setEndGame();
+	
+	//Destroy the sniper collision and sniper to allow player to go through
+	var sniperCollision = GameObject.Find("SniperCollision");
+	var sniper = GameObject.Find("sniper");
+	var militia = GameObject.Find("MilitiaMember");
+	
+	Destroy(sniperCollision);
+	Destroy(sniper);
+	Destroy(militia);
+}
+
+/*
+ * Remove First Aid Kit from inventory
+ */
+function RemoveItemFirstAid() {
+	var con1 = inv.Contents;
+	var newContents1 = new Array(con1);
+	for(var i:Transform in newContents1){ //Loop through the Items in the Inventory:
+		if(i.name == "FirstAidKit") //When a match is found, get the transform
+		{
+			//Removing from inventory
+			inv.RemoveItem(i);	
+		
+		}
+	}
+}
+
+/*
+ * Remove food from inventory
+ */
+function RemoveItemFood() {
+	if (dynamic.checkExist("lays")) {
+		// remove lays
+		var con2 = inv.Contents;
+		var newContents2 = new Array(con2);
+		for(var i:Transform in newContents2){ //Loop through the Items in the Inventory:
+			if(i.name == "lays") //When a match is found, get the transform
+			{
+				//Removing from inventory
+				inv.RemoveItem(i);		
+			}
+		}
+	}
+	else if (dynamic.checkExist("doritos1")) {
+		// remove doritos1
+		var con3 = inv.Contents;
+		var newContents3 = new Array(con3);
+		for(var i:Transform in newContents3){ //Loop through the Items in the Inventory:
+			if(i.name == "doritos1") //When a match is found, get the transform
+			{
+				//Removing from inventory
+				inv.RemoveItem(i);		
+			}
+		}
+	}
+	else if (dynamic.checkExist("doritos2")) {
+		// remove doritos2
+		var con4 = inv.Contents;
+		var newContents4 = new Array(con4);
+		for(var i:Transform in newContents4){ //Loop through the Items in the Inventory:
+			if(i.name == "doritos2") //When a match is found, get the transform
+			{
+				//Removing from inventory
+				inv.RemoveItem(i);		
+			}
+		}
+	}
+}
+
+/*
+ * Remove toy from inventory
+ */
+function RemoveItemToy() {
+	if (dynamic.checkExist("Gameboy")) {
+		// remove Gameboy
+		var con5 = inv.Contents;
+		var newContents5 = new Array(con5);
+		for(var i:Transform in newContents5){ //Loop through the Items in the Inventory:
+			if(i.name == "Gameboy") //When a match is found, get the transform
+			{
+				//Removing from inventory
+				inv.RemoveItem(i);		
+			}
+		}
+	}
+	else if (dynamic.checkExist("yoyo")) {
+		// remove yoyo
+		var con3 = inv.Contents;
+		var newContents3 = new Array(con3);
+		for(var i:Transform in newContents3){ //Loop through the Items in the Inventory:
+			if(i.name == "yoyo") //When a match is found, get the transform
+			{
+				//Removing from inventory
+				inv.RemoveItem(i);		
+			}
+		}
+	}
+}
+
+
+/*
+ * Remove rope/ladder from inventory
+ */
+function RemoveItemLadderRope() {
+	if (dynamic.checkExist("Ladder")) {
+		// remove Gameboy
+		var con5 = inv.Contents;
+		var newContents5 = new Array(con5);
+		for(var i:Transform in newContents5){ //Loop through the Items in the Inventory:
+			if(i.name == "Ladder") //When a match is found, get the transform
+			{
+				//Removing from inventory
+				inv.RemoveItem(i);		
+			}
+		}
+	}
+	else if (dynamic.checkExist("Rope")) {
+		// remove yoyo
+		var con3 = inv.Contents;
+		var newContents3 = new Array(con3);
+		for(var i:Transform in newContents3){ //Loop through the Items in the Inventory:
+			if(i.name == "Rope") //When a match is found, get the transform
+			{
+				//Removing from inventory
+				inv.RemoveItem(i);		
+			}
+		}
+	}
 }
 
 /*

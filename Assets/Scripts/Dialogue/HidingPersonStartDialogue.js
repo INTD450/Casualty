@@ -18,4 +18,8 @@ class HidingPersonStartDialogue extends OnClickAction {
 			DialogueSystem.StartDialogue("HidingPersonSecondEncounter");
 		}
 	}
+
+	function resetToZero() {
+		metHiding = 0;
+	}
 }

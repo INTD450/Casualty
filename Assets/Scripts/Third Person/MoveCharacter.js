@@ -34,7 +34,7 @@ function Update () {
 	// Toggle walking/running with the shift key 
   
     
-    if(Input.GetKey("left shift")){
+    if(Input.GetKey("left shift") || Input.GetKey("right shift")){
         isWalking = false; 
        
     }
@@ -65,12 +65,14 @@ function Update () {
 
             if (isWalking){
                 anim.Walk();
+		
             } else {
                 anim.Run();
             }
 
         } else {
             anim.Idle();
+            
         }
 
         // Jump disabled

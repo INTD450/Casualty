@@ -317,6 +317,68 @@ ModelImporter:
     4300118: CounterSink
     4300120: FridgeShelf
     4300122: FridgeShelf2
+    6400000: BathroomDoor
+    6400002: BathroomDoorHandle
+    6400004: BathroomWall
+    6400006: bedframe
+    6400008: Blanket
+    6400010: Chair001
+    6400012: Chair1Legs
+    6400014: chair2
+    6400016: Chair2Legs
+    6400018: Counter
+    6400020: CounterSink
+    6400022: Doorframe
+    6400024: eclock
+    6400026: Fridge
+    6400028: Fridgedoor
+    6400030: FridgeShelf
+    6400032: FridgeShelf2
+    6400034: FrontDoor
+    6400036: FrontDoorhandle
+    6400038: FrontDoorPlexi
+    6400040: glass1
+    6400042: glass2
+    6400044: lamp
+    6400046: lamp001
+    6400048: lampset
+    6400050: lampset001
+    6400052: Line001
+    6400054: mattress
+    6400056: nightstand
+    6400058: pillowleft
+    6400060: pillowright
+    6400062: Room
+    6400064: shower002
+    6400066: shower01
+    6400068: ShowerHead
+    6400070: showerroom
+    6400072: showerroomdoor
+    6400074: table
+    6400076: tableset
+    6400078: tap
+    6400080: Toilet
+    6400082: TV
+    6400084: TVBase
+    6400086: TVGlass
+    6400088: TVscreen
+    6400090: wardrobe
+    6400092: wardrobebottomleft
+    6400094: wardrobebottomright
+    6400096: wardrobedoorhandlebottomleft
+    6400098: wardrobedoorhandlebottomright
+    6400100: wardrobedoorhandleupperleft
+    6400102: wardrobedoorhandleupperright
+    6400104: wardrobeupperleft
+    6400106: wardrobeupperright
+    6400108: window1
+    6400110: window2
+    6400112: window3
+    6400114: window4
+    6400116: windowpane1
+    6400118: windowpane2
+    6400120: windowpane3
+    6400122: windowpane4
     7400000: Take 001
     9500000: //RootNode
   materials:
@@ -339,7 +401,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: .00999999978
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

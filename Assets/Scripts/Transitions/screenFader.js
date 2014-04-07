@@ -46,7 +46,7 @@ function setScene(scene: int){
 }
 
 function setEndGame(){
-	endGame = true;
+	endGame = true; 
 }
 
 function FadeToClear ()
@@ -77,7 +77,7 @@ function StartScene ()
         guiTexture.color = Color.clear;
         guiTexture.enabled = false;
         
-        // The scene is no longer starting.
+  // The scene is no longer starting.
         sceneStarting = false;
         
     }

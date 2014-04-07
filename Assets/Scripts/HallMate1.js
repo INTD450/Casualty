@@ -19,7 +19,7 @@ class HallMate1 extends OnClickAction {
 			clickManager.ShowDialogBox("Shhhhh!!!!! Someone's outside!");
 		}
 		else if(number == 1){
-			clickManager.ShowDialogBox("'Hear movement, people rustling, probably trying to keep quiet while hiding'");
+			clickManager.ShowDialogBox("[You hear movement and people rustling.]");
 		}
 		else if(number == 2){
 			clickManager.ShowDialogBox(".....are they gone? Should we call the staff?");
